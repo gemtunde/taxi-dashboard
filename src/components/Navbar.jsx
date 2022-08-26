@@ -25,7 +25,10 @@ const Nav = styled.nav`
   color: white;
   padding: 2rem; 
   //or try this 
-  position: sticky;
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  //margin-bottom:120vh;
 
     .title{
       h1{
@@ -44,6 +47,7 @@ const Nav = styled.nav`
       padding: 1rem 8rem 1rem 1rem;
       border-radius: 1rem;
       gap:1rem;
+      margin-right: 16rem;
 
       svg{
         color: orange;  

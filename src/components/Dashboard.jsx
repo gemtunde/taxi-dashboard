@@ -37,7 +37,9 @@ const Section = styled.section`
   .navbar{
     width: 100%;
     border-bottom: 0.1rem solid #555;    
-   // position: fixed;
+    //position: fixed;
+    background-color:black;
+    margin-bottom: 6rem;
   }
   .grid{
     display: flex;
