@@ -45,6 +45,7 @@ const Section = styled.section`
     height: 100%;
     gap:1rem;
     margin-top: 2rem;
+    padding: 2rem;
 
     .row__one{
       display: grid;
