@@ -9,24 +9,28 @@ import { cardStyle } from './ReusableStyle';
 const Transfers = () => {
   const transactions = [
     {
+      id:1,
       image:avatarImage,
       name:'From Mo Salah',
       time:'Today, 16:36',
       amount:'+$56',
     },
     {
+      id:2,
       image:avatarImage2,
       name:'To Sadio Mane',
       time:'Yesterday, 22:36',
       amount:'+$96',
     },
     {
+      id:3,
       image:avatarImage3,
       name:'From Thiago',
       time:'Today, 11:41',
       amount:'+$106',
     },
     {
+      id:4,
       image:avatarImage2,
       name:'To Sadio Mane',
       time:'Yesterday, 22:36',
@@ -43,7 +47,7 @@ const Transfers = () => {
             {
             transactions.map((transaction)=>{
               return(
-                <div className="transaction">
+                <div className="transaction" key={transaction.id}>
                   <div className="transaction__title">
                     <div className="transaction__title__image">
                       <img 

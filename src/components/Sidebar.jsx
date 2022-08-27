@@ -14,6 +14,9 @@ import {VscChromeClose} from 'react-icons/vsc';
 
 const Sidebar = () => {
   const [currentLink, setCurrentLink] = useState(1);
+  const [isNavbarState, isSetNavbarState] = useState(false);
+  const html = document.querySelector('html');
+  html.addEventListener('click', ()=>isSetNavbarState(false));
 
   return (
     <>
@@ -84,7 +87,63 @@ const Sidebar = () => {
         </a>
       </div>
     </Section>
-
+    <ResponsiveNav
+     state={isNavbarState} 
+    className={isNavbarState ? 'show' : ''}
+    >
+      <div className="responsive__links">
+            <ul>
+            <li 
+            onClick={()=>setCurrentLink(1)}
+             className={currentLink === 1 ? 'active' : ''}>
+              <a href='#'> 
+               <MdSpaceDashboard />
+               <span> Dashboard</span>
+              </a>
+            </li>
+            <li 
+            onClick={()=>setCurrentLink(2)}
+             className={currentLink === 2 ? 'active' : ''}>
+              <a href='#'> 
+               <RiDashboard2Fill />
+               <span> Riders</span>
+              </a>
+            </li>
+            <li 
+            onClick={()=>setCurrentLink(3)} 
+            className={currentLink === 3 ? 'active' : ''}>
+              <a href='#'> 
+               <FaAddressCard />
+               <span> Payment Details</span>
+              </a>
+            </li>
+            <li 
+            onClick={()=>setCurrentLink(4)} 
+            className={currentLink === 4 ? 'active' : ''}>
+              <a href='#'> 
+               <GiTwirlCenter />
+               <span> Learning Center</span>
+              </a>
+            </li>
+            <li 
+            onClick={()=>setCurrentLink(5)} 
+            className={currentLink === 5 ? 'active' : ''}>
+              <a href='#'> 
+               <BsFillChatTextFill />
+               <span> FAQs</span>
+              </a>
+            </li>
+            <li 
+            onClick={()=>setCurrentLink(6)}
+             className={currentLink === 6 ? 'active' : ''}>
+              <a href='#'> 
+               <IoSettings />
+               <span> Settings</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+    </ResponsiveNav>
     </>
   )
 }
@@ -190,5 +249,41 @@ const Section = styled.section`
       }
     }
   }
+
+  @media screen and (min-width: 200px) and (max-width:1080px) {
+    position: initial ;
+    width: 100%;
+    height: max-content;
+    padding: 1rem;
+
+    .top{
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+
+      .toggle{
+        display: block;
+        color: white;
+        z-index: 10;
+
+        svg{
+          font-size: 1.4rem;
+        }
+      }
+      .brand{
+        gap: 1rem;
+        justify-content: flex-start;        
+      }
+    }
+    .top > .links,
+    .logout{
+      display: none;
+    }
+
+  }
 `;
 
+const ResponsiveNav = styled.nav`
+  
+`;

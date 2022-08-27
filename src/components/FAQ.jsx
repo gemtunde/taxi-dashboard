@@ -11,14 +11,17 @@ import {IoMdCash} from 'react-icons/io'
 const FAQ = () => {
   const faqs = [
     {
+      id:1,
       icon:<AiFillCalendar />,
       text:'How to manage time and get good marks for trips',
     },
     {
+      id:2,
       icon:<MdTimelapse />,
       text:'How to regulate transaction over time',
     },
     {
+      id:3,
       icon:<IoMdCash />,
       text:'How to withdraw cash from ATM',
     },
@@ -32,7 +35,7 @@ const FAQ = () => {
         {
           faqs.map((faq)=>{
             return(
-              <div className="faq">
+              <div className="faq" key={faq.id}>
                 <div className="info">
                   {faq.icon}
                   <h4>{faq.text}</h4>
