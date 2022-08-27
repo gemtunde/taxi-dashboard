@@ -26,6 +26,13 @@ const Transfers = () => {
       time:'Today, 11:41',
       amount:'+$106',
     },
+    {
+      image:avatarImage2,
+      name:'To Sadio Mane',
+      time:'Yesterday, 22:36',
+      amount:'+$96',
+    },
+    
   ]
   return (
     <Section>
@@ -90,6 +97,7 @@ const Section = styled.section`
       justify-content: space-between;
       align-items: center;
         &__title{
+          font-size: 0.8rem;
           display: flex;
           gap: 1rem;
           &__image{
