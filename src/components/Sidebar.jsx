@@ -26,7 +26,22 @@ const Sidebar = () => {
           <FaTaxi />
           <span>Ryder</span>
         </div>
-        <div className="toggle"></div>
+        <div className="toggle">
+          {
+            isNavbarState ? (
+              <VscChromeClose
+                onClick={()=> isSetNavbarState(false)}
+              />
+            ) : (
+              <GiHamburgerMenu
+                onClick={(e)=>{
+                  e.stopPropagation();
+                  isSetNavbarState(true);
+                }}
+              />
+            )
+          }
+        </div>
         <div className="links">
           <ul>
             <li 
@@ -250,7 +265,7 @@ const Section = styled.section`
     }
   }
 
-  @media screen and (min-width: 200px) and (max-width:1080px) {
+  @media screen and (min-width: 280px) and (max-width:1080px) {
     position: initial ;
     width: 100%;
     height: max-content;
@@ -276,7 +291,7 @@ const Section = styled.section`
         justify-content: flex-start;        
       }
     }
-    .top > .links,
+    .top >.links,
     .logout{
       display: none;
     }
@@ -285,5 +300,72 @@ const Section = styled.section`
 `;
 
 const ResponsiveNav = styled.nav`
-  
+  position: fixed;
+  right: -10vh;
+  top: 0;
+  z-index: 20;
+  background-color: black;
+  height: 100vh;
+  width: ${(state)=>(state ? '60%' : '0%')};
+  transition: 0.4s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  padding: 1rem;
+
+  .responsive__links{
+            ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+     
+        li{
+          padding: 0.6rem 1rem;
+          border-radius: 0.6rem;
+
+           &:hover{
+            background-color: orange;
+              a {
+              color: black;
+              } 
+           } 
+
+          a{
+            text-decoration: none;
+            display: flex;
+            color: white;
+            gap: 1rem;
+          }          
+                  
+          }
+        .active{
+            background-color: orange;
+              a{
+                color: black;
+              }
+          }
+
+      }
+  }
+
 `;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

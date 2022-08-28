@@ -67,4 +67,17 @@ const Nav = styled.nav`
           }
         }
     }
+
+    @media screen and (min-width: 280px) and (max-width:1080px) {
+      flex-direction:column;
+      .title{
+        h1{
+          span{
+            display: block;
+            margin: 0.5rem 0;
+          }
+        }
+      }
+  
+  }
 `;
