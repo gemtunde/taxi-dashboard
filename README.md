@@ -1,17 +1,11 @@
-# Getting Started with Create React App
+# Dashboard built with with React js/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Sass/Scss for stying.
+Mui
 
-## Available Scripts
+click to view dashboard\
+Open [https://tm30.netlify.app/](https://tm30.netlify.app/) to view it in your browser.
 
-In the project directory, you can run:
+## Screenshort preview
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-# this was built with:
-
-The react-icons, recharts, styled component,scrollreveal.\
-You may also see package.json file for other dependencies used.
+<img width="934" alt="tm30" src="https://user-images.githubusercontent.com/52404803/186613070-7dbaec62-df45-472c-8d4d-324e0ee0b192.png">
