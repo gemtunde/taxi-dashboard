@@ -7,4 +7,5 @@ Open [https://gemtunde-taxi-dashboard.netlify.app/](https://gemtunde-taxi-dashbo
 
 ## Screenshort preview
 
-<img width="934" alt="tm30" src="https://user-images.githubusercontent.com/52404803/186613070-7dbaec62-df45-472c-8d4d-324e0ee0b192.png">
+
+<img width="938" alt="taxi-dashboard" src="https://user-images.githubusercontent.com/52404803/189476821-faa6febc-21ba-49ff-ac12-ef3c23ea44c6.png">
