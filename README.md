@@ -1,10 +1,9 @@
 # Dashboard built with with React js/
 
-Sass/Scss for stying.
-Mui
+Styled-component for styling.
 
 click to view dashboard\
-Open [https://tm30.netlify.app/](https://tm30.netlify.app/) to view it in your browser.
+Open [https://gemtunde-taxi-dashboard.netlify.app/](https://gemtunde-taxi-dashboard.netlify.app/) to view it in your browser.
 
 ## Screenshort preview
 
